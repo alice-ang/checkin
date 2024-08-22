@@ -22,6 +22,7 @@ export const Timer: FC<TimerProps> = ({ seconds = 60 }) => {
 
   useEffect(() => {
     let intervalId: undefined | NodeJS.Timeout;
+    console.log(isRunning, countdown);
     if (isRunning && countdown > 0) {
       intervalId = setInterval(() => {
         setCountdown((prevSeconds) => prevSeconds - 1);
@@ -30,15 +31,15 @@ export const Timer: FC<TimerProps> = ({ seconds = 60 }) => {
       setIsRunning(false);
     }
     return () => clearInterval(intervalId);
-  }, [isRunning, countdown]);
+  }, [isRunning, countdown, setCountdown]);
 
   const formatTime = useCallback(() => {
     return countdown.toString().padStart(2, "0");
   }, [countdown]);
 
   return (
-    <div className="space-y-4">
-      <h1 className="font-bold">{formatTime()}s</h1>
+    <div className="mx-auto w-full max-w-md space-y-4">
+      <h1 className="text-center font-bold">{formatTime()}s</h1>
       <Progress value={(countdown / seconds) * 100} />
       <div className="flex flex-row gap-4">
         {countdown > 0 && countdown <= seconds && (

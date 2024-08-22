@@ -1,13 +1,24 @@
-import { Button, Timer } from "@/components";
-import { Rocket, Play } from "lucide-react";
+import { BackButton, Button, CheckIn, Constraints } from "@/components";
+import { Rocket } from "lucide-react";
 
-export default function CheckIn() {
+export default function CheckInPage() {
   return (
-    <section className="p-4">
-      <Rocket />
-      <h3>Checkin</h3>
-
-      <Timer />
+    <section className="min-h-screen">
+      <header className="bg-secondary">
+        <Constraints>
+          <nav className="flex flex-row items-center justify-between gap-2">
+            <BackButton />
+            <h4 className="line-clamp-2 items-center">
+              <span className="inline-flex align-bottom">
+                <Rocket className="mr-2" />
+              </span>
+              Check-in
+            </h4>
+            <Button variant="ghost" size="icon" />
+          </nav>
+        </Constraints>
+      </header>
+      <CheckIn />
     </section>
   );
 }
