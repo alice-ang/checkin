@@ -11,27 +11,32 @@ export const CheckIn: FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState<number | null>(null);
 
   return (
-    <section className="section-constraints flex flex-col justify-between space-y-6">
-      <div>
-        <div className="flex items-center gap-2">
-          <Rocket />
-          <h3>{inProgress ? "Today's Question" : checkInData.title}</h3>
+    <section className="section-constraints flex flex-col justify-between space-y-4">
+      <div className="space-y-6">
+        <div>
+          <div className="flex items-center gap-2">
+            <Rocket />
+            <h3>{inProgress ? "Today's Question" : checkInData.title}</h3>
+          </div>
+          <p className="text-muted-foreground">
+            {inProgress ? "" : checkInData.subtitle}
+          </p>
         </div>
-        <p className="text-muted-foreground">
-          {inProgress ? "" : checkInData.subtitle}
-        </p>
+
+        <section className="space-y-2">
+          <p className="text-xl">
+            {currentQuestion
+              ? checkInData.questions[currentQuestion].question
+              : checkInData.description}
+          </p>
+          <p className="font-normal italic">
+            Start by asking the person to your right.
+          </p>
+        </section>
       </div>
 
-      <section className="grow">
-        <p>
-          {currentQuestion
-            ? checkInData.questions[currentQuestion].question
-            : checkInData.description}
-        </p>
-      </section>
-
       {inProgress ? (
-        <Timer />
+        <Timer seconds={3} />
       ) : (
         <Button
           className="w-full"

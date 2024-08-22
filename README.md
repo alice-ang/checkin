@@ -41,7 +41,7 @@ setIsRunning(false);
 - Fixed by adding an if statement to also reset the countdown in toggleTimer
 
 ```
-if (!isRunning) {
+if (!isRunning && countdown === 0) {
 setCountdown(seconds);
 }
 ```
