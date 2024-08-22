@@ -75,3 +75,9 @@
     @apply text-2xl font-semibold;
   }
 }
+
+@layer utilities {
+  .section-constraints {
+    @apply mx-auto h-[calc(100vh-100px)] max-w-screen-xl p-4;
+  }
+}
