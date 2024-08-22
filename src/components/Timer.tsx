@@ -12,11 +12,11 @@ export const Timer: FC<TimerProps> = ({ seconds = 60 }) => {
   const [isRunning, setIsRunning] = useState(false);
 
   const toggleTimer = useCallback(() => {
-    if (!isRunning) {
+    if (!isRunning && countdown === 0) {
       setCountdown(seconds);
     }
     setIsRunning((prevState) => !prevState);
-  }, [isRunning, seconds]);
+  }, [countdown, isRunning, seconds]);
 
   const resetTimer = useCallback(() => {
     setCountdown(seconds);
@@ -31,7 +31,6 @@ export const Timer: FC<TimerProps> = ({ seconds = 60 }) => {
         setCountdown((prevSeconds) => prevSeconds - 1);
       }, 1000);
     } else if (countdown === 0) {
-      console.log("DONE");
       setIsRunning(false);
     }
     return () => clearInterval(intervalId);
