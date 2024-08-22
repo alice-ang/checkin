@@ -25,7 +25,7 @@ export const CheckIn: FC = () => {
 
         <section className="space-y-2">
           <p className="text-xl">
-            {currentQuestion
+            {currentQuestion !== null
               ? checkInData.questions[currentQuestion].question
               : checkInData.description}
           </p>
