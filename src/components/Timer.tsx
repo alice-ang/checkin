@@ -31,7 +31,6 @@ export const Timer: FC<TimerProps> = ({ seconds = 60 }) => {
         setCountdown((prevSeconds) => prevSeconds - 1);
       }, 1000);
     } else if (countdown === 0) {
-      console.log("DONE");
       setIsRunning(false);
     }
     return () => clearInterval(intervalId);
