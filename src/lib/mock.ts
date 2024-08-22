@@ -46,7 +46,6 @@ export const checkInData = {
     },
     {
       subtitle: "Reset the timer for each person",
-
       question: "What's one goal you're working towards right now?",
     },
   ],

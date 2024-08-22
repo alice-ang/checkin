@@ -44,7 +44,7 @@ export const CheckIn: FC = () => {
             setInProgress(true);
 
             setCurrentQuestion(
-              getRandomNumber(0, checkInData.questions.length),
+              getRandomNumber(0, checkInData.questions.length - 1),
             );
           }}
         >
