@@ -9,7 +9,7 @@ type HeaderProps = {
 export const HeaderBar: FC<HeaderProps> = ({ children }) => {
   return (
     <header className="grid h-24 bg-secondary">
-      <nav className="place-self-end0 mx-auto flex w-full max-w-screen-xl flex-row items-center justify-between gap-2 p-4">
+      <nav className="mx-auto flex w-full max-w-3xl flex-row items-center justify-between gap-2 place-self-end p-4">
         <BackButton />
         {children}
 

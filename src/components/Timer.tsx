@@ -42,7 +42,7 @@ export const Timer: FC<TimerProps> = ({ seconds = 60 }) => {
   }, [countdown]);
 
   return (
-    <div className="mx-auto w-full max-w-md space-y-4">
+    <div className="mx-auto w-full space-y-4">
       <h1 className="text-center font-bold">{formatTime()}s</h1>
       <Progress value={(countdown / seconds) * 100} />
       <div className="flex flex-row gap-4">
