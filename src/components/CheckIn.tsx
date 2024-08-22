@@ -36,7 +36,7 @@ export const CheckIn: FC = () => {
       </div>
 
       {inProgress ? (
-        <Timer seconds={3} />
+        <Timer />
       ) : (
         <Button
           className="w-full"
