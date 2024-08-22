@@ -29,3 +29,6 @@ Good luck, and we look forward to seeing your work!
 ### Improvents
 
 1. Bigger buttons
+2. Changed button variant on Reset to ghost (Not the same as Start)
+
+Exit button unessasary - is the same as back button
