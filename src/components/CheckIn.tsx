@@ -41,6 +41,7 @@ export const CheckIn: FC = () => {
             className="w-full"
             onClick={() => {
               setInProgress(true);
+
               setCurrentQuestion(
                 getRandomNumber(0, checkInData.questions.length),
               );

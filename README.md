@@ -47,3 +47,7 @@ Trouble restarting the timer after countdown reched 0
 problem in else if (countdown === 0) {
 setIsRunning(false);
 }
+
+Added if (!isRunning) {
+setCountdown(seconds);
+} in toggle timer
