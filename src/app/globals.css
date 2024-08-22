@@ -66,4 +66,18 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  h1 {
+    @apply text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+}
+
+@layer utilities {
+  .section-constraints {
+    @apply mx-auto h-[calc(100vh-100px)] max-w-3xl p-4;
+  }
 }

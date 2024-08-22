@@ -29,3 +29,25 @@ Good luck, and we look forward to seeing your work!
 ### Improvents
 
 1. Bigger buttons
+2. Changed button variant on Reset to ghost (Not the same as Start)
+3. Static layout for timer button - no layout shift
+   Reset to the left - not
+
+Exit button unessasary - is the same as back button
+
+Start button and start timer button needs to be different
+
+- Dont mean and do the same thing
+- Change Start to Next or Let's go / Get started
+- No icon
+
+### Problems
+
+Trouble restarting the timer after countdown reched 0
+problem in else if (countdown === 0) {
+setIsRunning(false);
+}
+
+Added if (!isRunning) {
+setCountdown(seconds);
+} in toggle timer
