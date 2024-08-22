@@ -13,7 +13,9 @@
 
 - Divide the exercise into tasks based on the requirements
   - Functionality first, then styling
-- Make components as reusable as possible
+- Make components reusable
+- Follow Figma design as close as possible
+  - Font sizes, weight, style and padding etc
 
 #### Improvents
 
